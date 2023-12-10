@@ -3,7 +3,7 @@ const $indicator = document.querySelectorAll(".main .slide-list ul li");
 let $number = 0;
 let $swiper = function(){
     $number ++
-    if($number == 5){
+    if($number == 4){
         $number = 0;
     }
     $indicator.forEach((e,i)=>{
@@ -20,9 +20,13 @@ let $swiper = function(){
     $indicator[$number].classList.add("active");
 }
 
-let $interval = setInterval($swiper, 5000);
 $item[0].classList.add("on");
 $indicator[0].classList.add("on");
+$indicator[0].classList.add("active");
+
+let $interval = setInterval($swiper, 5000);
+
+
 
 $indicator.forEach((e,i)=>{
     e.addEventListener("mouseenter", ()=>{
