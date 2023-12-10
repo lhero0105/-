@@ -176,6 +176,7 @@ body{
     height: 150px;
     text-align: center;
     background-color: #E4E4E4;
+    margin: 50px 0;
 }
 .main .notice .dtu-notice span{
     height: 90px;
@@ -286,24 +287,95 @@ body{
     background-color: #fff;
 }
 .main .department .department-wrap{
+    margin-top: 100px;
     padding-top: 300px;
     background-image: url("../image/image\ 12.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-attachment: fixed;
 }
 .main .department .department-guide{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    position: relative;
+}
+.main .department .department-guide::after{
+    position: absolute;
+    content: "";
     background-color: #7cb3b8;
+    opacity: 0.7;
     width: 100%;
     height: 700px;
+    z-index: 9;
+    top: -100px;
+
+}
+.main .department .department-guide .department-guide-wrap-blank{
+    flex: 1;
+    position: relative;
+    z-index: 99;
+}
+.main .department .department-guide .department-guide-wrap-blank .department-guide-card{
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 700px;
+    top: -150px;
+    right: 50px;
+    background-color: #5C8089;
+}
+.main .department .department-guide .department-guide-wrap-blank .department-guide-card img{
+    width: 400px;
+    height: 400px;
+}
+.main .department .department-guide .department-guide-wrap-blank .department-guide-card .desc{
+    font-size: 55px;
+    font-weight: bold;
+    color: #D9DADE;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+.main .department .department-guide .department-guide-wrap{
+    flex: 1.5;
+    width: 80%;
+    height: 100%;
+    z-index: 99;
 }
 .main .department .department-guide .department-guide-title{
-    
+    font-size: 40px;
+    height: 10%;
+    margin-left: 50px;
+    line-height: 75px;
+    color: #fff;
 }
-
-.main .test{
+.main .department .department-guide ul{
+    width: 96%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 20px;
+}
+.main .department .department-guide ul li{
+    flex: 14.66%;
+    height: 250px;
+    color: #fff;
+}
+.main .department .department-guide ul li img{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+}
+.main .department .department-guide ul li span{
+    margin-top: 50px;
+    display: block;
+    font-size: 17px;
+}
+.main .footer{
     width: 100%;
-    height: 1000px;
+    height: 300px;
+    background-color: #2B2E3D;
 }
