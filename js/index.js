@@ -1,5 +1,10 @@
 const $item = document.querySelectorAll(".main .slide .slide-item");
 const $indicator = document.querySelectorAll(".main .slide-list ul li");
+const $notice_menu = document.querySelectorAll(".calender-tab ul li");
+const $notice_desc = document.querySelectorAll(".calender-bot ul");
+
+
+// 스와이퍼
 let $number = 0;
 let $swiper = function(){
     $number ++
@@ -25,8 +30,6 @@ $indicator[0].classList.add("on");
 $indicator[0].classList.add("active");
 
 let $interval = setInterval($swiper, 5000);
-
-
 
 $indicator.forEach((e,i)=>{
     e.addEventListener("mouseenter", ()=>{
@@ -57,3 +60,13 @@ $indicator.forEach((e,i)=>{
         $interval = setInterval($swiper, 5000);
     });
 });
+
+// notice
+$notice_menu.forEach((e,i)=>{
+    e.addEventListener("mouseover", ()=>{
+        $notice_desc.forEach((el,index)=>{
+            el.style.display = "none"
+        });
+        $notice_desc[i].style.display = "block"
+    })
+})
