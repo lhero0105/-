@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
 </head>
 <body>
     <div class="nav">
@@ -30,34 +31,53 @@
                 </ul>
             </div>
             <div class="submenu">
+                <div class="submenu-blank"></div>
                 <div class="submenu-wrap">
-                    <ul>
+                    <div class="submenu-container">
+                    <div class="submenu-list">
+                        <ul>
                         <li>학교소개</li>
                         <li>총장실</li>
                         <li>대학현황</li>
                         <li>학교법인</li>
                         <li>학술교류대학</li>
                         <li>캠퍼스안내</li>
-                    </ul>
+                        </ul>
+                    </div>
+                    <div class="submenu-list">
                     <ul>
                         <li>대학</li>
                         <li>대학원</li>
                         <li>전문대학교</li>
                         <li>특수대학원</li>
                     </ul>
+                    </div>
+                    <div class="submenu-list">
                     <ul>
                         <li>대학/대학원</li>
                         <li>학사행정</li>
                         <li>교육지원</li>
                         <li>정부재정지원사업</li>
                     </ul>
+                    </div>
+                    <div class="submenu-list">
                     <ul>
                         <li>연구소소개</li>
                         <li>우수연구자소개</li>
-                        <li></li>
-                        <li></li>
                     </ul>
+                    </div>
+                    <div class="submenu-list">
+                    <ul>
+                        <li>Lorem, ipsum</li>
+                        <li>Lorem</li>
+                    </ul>
+                    </div>
+                    <div class="submenu-list">
+                    <ul>
+                    </ul>
+                    </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -131,13 +151,23 @@
                 </div>
                 <div class="event">
                     <div class="event-top">EVENT</div>
-                    <div class="event-bot">
-                        <div class="event-bot-wrap">
+                    <div class="swiper mySwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
                             <div class="event-title">글로벌프라자<br>대관 안내</div>
                             <div class="event-desc">대관 시설 : 대강당, 그린홀, 아트홀</div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="event-title">김춘식프라자<br>내집 안내</div>
+                            <div class="event-desc">대관 시설 : 대강당, 그린홀, 아트홀</div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="event-title">박춘배프라자<br>니집 안내</div>
+                            <div class="event-desc">대관 시설 : 대강당, 그린홀, 아트홀</div>
+                        </li>
+                    </ul>
                 </div>
+            </div>
             </div>
         </div>
         <div class="department">
@@ -209,6 +239,8 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

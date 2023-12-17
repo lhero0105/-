@@ -1,10 +1,23 @@
+const $menu = document.querySelectorAll(".nav .menu ul li");
+const $submenu = document.querySelector(".nav .submenu");
 const $item = document.querySelectorAll(".main .slide .slide-item");
 const $indicator = document.querySelectorAll(".main .slide-list ul li");
 const $notice_menu = document.querySelectorAll(".calender-tab ul li");
 const $notice_desc = document.querySelectorAll(".calender-bot ul");
 
+// nav
+$menu.forEach((e,i)=>{
+    e.addEventListener("mouseenter", ()=>{
+        $submenu.style.visibility = "visible";
+        $submenu.style.height = "400px"
+    })
+})
+$submenu.addEventListener("mouseleave", ()=>{
+    $submenu.style.visibility = "hidden";
+    $submenu.style.height = "0"
+})
 
-// 스와이퍼
+// swiper구현
 let $number = 0;
 let $swiper = function(){
     $number ++
@@ -63,10 +76,19 @@ $indicator.forEach((e,i)=>{
 
 // notice
 $notice_menu.forEach((e,i)=>{
-    e.addEventListener("mouseover", ()=>{
+    e.addEventListener("click", ()=>{
         $notice_desc.forEach((el,index)=>{
             el.style.display = "none"
         });
         $notice_desc[i].style.display = "block"
     })
 })
+
+// event 스와이퍼 라이브러리
+let swiper = new Swiper(".mySwiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  });

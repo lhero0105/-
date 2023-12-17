@@ -1,5 +1,6 @@
 @charset "utf-8";
-ul{list-style: none; color: #000; margin: 0; padding: 0;}
+*{ margin: 0; padding: 0;}
+ul{list-style: none; color: #000;}
 a {text-decoration: none;}
 body{
     width: 100%;
@@ -32,23 +33,59 @@ body{
     flex: 2;
     text-align: center;
     margin-top: 45px;
+    z-index: 99;
 }
 .nav .menu{
     flex: 8;
+    z-index: 99;
 }
 .nav .menu ul{
     display: flex;
     justify-content: space-around;
     line-height: 100px;
 }
+.nav .menu ul li{
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+.nav .menu ul li:hover{
+    
+}
 .nav .submenu{
-    display: none;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 9;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    background-color: #ddd;
+    overflow: hidden;
+}
+.nav .submenu .submenu-blank{
+    flex: 2;
+}
+.nav .submenu .submenu-wrap{
+    flex: 8;
+}
+.nav .submenu .submenu-container{
+    display: flex;
+    justify-content: space-around;
+}
+.nav .submenu .submenu-container .submenu-list ul{
+    width: 130px;
+    text-align: center;
+    margin-top: 100px;
+}
+.nav .submenu .submenu-container .submenu-list ul li{
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 .main .slide{
     border: 1px solid #000;
     width: 100%;
     margin-top: 40px;
-    
 }
 .main .slide .slide-wrap{
     display: flex;
@@ -95,6 +132,7 @@ body{
     height: 70px;
     text-align: center;
     border: 1px solid #000;
+    cursor: pointer;
 }
 .main .slide-list ul li:nth-child(1){
     background-color: #F4E3B7;
@@ -228,6 +266,11 @@ body{
     opacity: 0.8;
     cursor: pointer;
 }
+.main .notice .notice-contents .calendar .calender-top .calender-tab ul li:hover{
+    opacity: 1;
+    font-weight: bold;
+    background-color: #ddd;
+}
 .main .notice .notice-contents .calendar .calender-bot{
     position: relative;
     width: 100%;
@@ -279,6 +322,7 @@ body{
 .main .notice .notice-contents .event{
     border: 1px solid #000;
     flex: 1;
+    overflow: hidden;
 }
 .main .notice .notice-contents .event .event-top{
     font-weight: bold;
@@ -287,20 +331,27 @@ body{
     height: 90px;
     line-height: 90px;
 }
-.main .notice .notice-contents .event .event-bot{
+.main .notice .notice-contents .event .swiper{
     width: 100%;
-    height: 360px;
-    background-color: #6eaeba;
-    position: relative;
+    height: 100%;
 }
-.main .notice .notice-contents .event .event-bot .event-bot-wrap{
-    position: absolute;
-    content: "";
-    left: 45px;
-    top: 35px;
-    width: 80%;
-    height: 80%;
-    background-color: #fff;
+.main .notice .notice-contents .event .swiper-wrapper{
+    width: 500px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .notice .notice-contents .event .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+    background-color: #6eaeba;
+}
+.main .notice .notice-contents .event .swiper-wrapper .swiper-slide:nth-child(2){
+    background-color: #5344b9;
+}
+.main .notice .notice-contents .event .swiper-wrapper .swiper-slide:nth-child(3){
+    background-color: #b543a6;
 }
 .main .department .department-wrap{
     margin-top: 100px;
